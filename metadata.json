@@ -1,0 +1,6 @@
+{
+  "name": "Cyborg X",
+  "description": "A premium cyberpunk and AI-inspired responsive landing page showing the future of human-machine integration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

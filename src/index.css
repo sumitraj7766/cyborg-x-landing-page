@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Share+Tech+Mono&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "Share Tech Mono", monospace;
+
+  --color-cyber-dark: #07070e;
+  --color-cyber-gray: #121224;
+  --color-neon-blue: #00f0ff;
+  --color-neon-purple: #bd00ff;
+  --color-neon-cyan: #00ffcc;
+  --color-neon-pink: #ff0055;
+  
+  --animate-pulse-glow: pulseGlow 2.5s infinite ease-in-out;
+  --animate-float-orb: floatOrb 6s infinite ease-in-out;
+  --animate-cyber-scan: scanline 8s infinite linear;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 5px rgba(0, 240, 255, 0.4)) drop-shadow(0 0 15px rgba(189, 0, 255, 0.2));
+  }
+  50% {
+    filter: drop-shadow(0 0 15px rgba(0, 240, 255, 0.8)) drop-shadow(0 0 35px rgba(189, 0, 255, 0.5));
+  }
+}
+
+@keyframes floatOrb {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-15px) scale(1.02);
+  }
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+/* Custom Utilities for Neon Glows */
+@utility neon-shadow-blue {
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.25);
+}
+
+@utility neon-shadow-purple {
+  box-shadow: 0 0 15px rgba(189, 0, 255, 0.25);
+}
+
+@utility neon-shadow-cyan {
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.25);
+}
+
+@utility text-glow-blue {
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.6), 0 0 20px rgba(0, 240, 255, 0.3);
+}
+
+@utility text-glow-purple {
+  text-shadow: 0 0 10px rgba(189, 0, 255, 0.6), 0 0 20px rgba(189, 0, 255, 0.3);
+}
+
+@utility text-glow-cyan {
+  text-shadow: 0 0 10px rgba(0, 255, 204, 0.6), 0 0 20px rgba(0, 255, 204, 0.3);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #07070e;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 240, 255, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 240, 255, 0.6);
+}
+
